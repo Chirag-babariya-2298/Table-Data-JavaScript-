@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    table,
+    td {
+      border: 1px solid black;
+    }
+
+    tr {
+      text-align: center;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #403f3f;
+    }
+    .error_message{
+      color: red;
+      font-size: 14px;
+      display: none;
+    }
+  </style>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <form>
+
+    <div class="w-50 m-auto shadow p-4 rounded-5 my-4">
+      <div>
+        <label>First Name</label><br>
+        <input type="text" class="input_group w-100" name="fname">
+        <span class="error_message" name="fname">First Name Is Required.</span>
+      </div>
+
+      <div>
+        <label>Last Name</label><br>
+        <input type="text" class="input_group w-100" name="lname">
+        <span class="error_message" name="lname">Last Name Is Required.</span>
+      </div>
+
+      <div>
+        <label>Email</label><br>
+        <input type="email" class="input_group w-100" name="email">
+        <span class="error_message" name="email">Email Is Required.</span>
+      </div>
+
+      <div>
+        <label>City</label>
+        <select class="input_group w-100" name="city">
+          <option value="Select">Select City</option>
+          <option value="Surat">Surat</option>
+          <option value="Bharuch">Bharuch</option>
+        </select>
+        <span class="error_message" name="city">City Is Required.</span>
+      </div>
+
+      <div class="pt-2">
+        <label>Gender</label><br>
+        <input type="radio" class="input_group" name="gender" value="Male">Male
+        <input type="radio" class="input_group" name="gender" value="Female">Female
+        <span class="error_message" name="gender">Gender Is Required.</span>
+      </div>
+
+      <div class="pt-2">
+        <label>Shift</label><br>
+        <input type="radio" class="input_group" name="shift" value="Morning">Morning
+        <input type="radio" class="input_group" name="shift" value="Evening">Evening
+        <span class="error_message" name="shift">Shift Is Required.</span>
+      </div>
+
+      <div class="pt-2">
+        <label class="w-100">Hobby</label>
+        <input type="checkbox" class="input_group" name="hobby" value="cricket">Cricket
+        <input type="checkbox" class="input_group" name="hobby" value="driving">Driving
+        <input type="checkbox" class="input_group" name="hobby" value="working">Working
+        <span class="error_message" name="hobby">Hobby Is Required.</span>
+      </div>
+
+      <div class="pt-2">
+        <label class="w-100">Profile</label>
+        <input type="file" id="profile" class=" d-none" name="profile" onchange="previewImage(this)">
+        <img src="" height="100px" width="100px" style="display: none; margin-bottom: 10px;" id="profileImg">
+        <label for="profile" class="btn btn-secondary">Add profile picture</label>
+        <span class="error_message" name="profile">Profile Is Required.</span>
+      </div>
+
+
+
+      <button type="button" class="btn btn-danger mt-4" onclick="saveData()">Save</button>
+
+    </div>
+  </form>
+
+
+
+  <table class="col-12 bg-secondary text-white border-1">
+    <thead>
+      <tr class="text-center border-1 bg-secondary">
+        <th>Id</th>
+        <th>Profile</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Gender</th>
+        <th>Shift</th>
+        <th>Hobby</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+    </tbody>
+  </table>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/form.js"></script>
+</body>
+
+</html>
